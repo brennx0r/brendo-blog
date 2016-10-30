@@ -11,13 +11,13 @@ task :test do
   # try "cucumber"
 end
 
-# task :TravisTest do
-#   ENV["environment"] = 'headless'
-#   puts "Environment used in the run: "+ENV["environment"]
-#   puts "\nBuilding project in Travis-CI..."
-#   try "middleman server &>/dev/null &"
-#   try "cucumber"
-# end
+task :TravisTest do
+  ENV["environment"] = 'headless'
+  puts "Environment used in the run: "+ENV["environment"]
+  puts "\nBuilding project in Travis-CI..."
+  try "middleman server &>/dev/null &"
+  # try "cucumber"
+end
 
 task :deploy do
   puts "\nDeploying to GitHub Pages"
