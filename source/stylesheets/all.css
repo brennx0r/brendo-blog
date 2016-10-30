@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css?family=Abel|Lobster');
+
+body {
+	background-color: #fca9ed;
+	font-family: 'Abel', sans-serif;
+	font-size: 20px;
+}
+
+header {
+	font-size: 26px;
+	color: purple;
+}
+
+section {
+	float: left;
+	margin: 0 1.5%;
+  	width: 59%;
+  	padding: 1em;
+	background-color: white;
+	border-color: purple;
+	border-style: dotted;
+}
+
+aside { 
+    float: right;
+    margin: 0 1.5%;
+  	width: 28%;
+  	padding: 1em;
+  	background-color: white;
+	border-color: purple;
+	border-style: dotted;
+}
+
+footer {
+	clear: both;
+	margin: 0 1.5%;
+	*zoom: 1;
+	padding: 1em;
+}
+
+.icon {
+	width: 40px;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+h1 {
+	font-family: 'Lobster', cursive;
+}
+ 
+h2 {
+	font-family: 'Lobster', cursive;
+}
+
+h3 {
+	font-family: 'Lobster', cursive;
+}
+
+h4 {
+	font-family: 'Lobster', cursive;
+}
+
+h5 {
+	font-family: 'Lobster', cursive;
+}
+
+a:link {
+	color: #0f5577;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #3f1d70;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #21245e;
+	text-decoration: underline;
+}
+
+a:active {
+	color: #21245e;
+	text-decoration: underline;
+}
+

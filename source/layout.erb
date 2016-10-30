@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/images/favicon.ico" rel="icon" type="image/x-icon">
+    <link rel="stylesheet" href="/stylesheets/all.css">
+
+    <title>bren.do - blog<%= ' - ' + current_article.title unless current_article.nil? %></title>
+    <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
+  </head>
+  <body>
+
+    <header>
+      <h1>bren.do blog</h1>
+      <h5>putting the oops in devops since today</h5>
+    </header>
+
+    <section> 
+      <div id="main" role="main" class="main">
+        <%= yield %>
+      </div>
+    </section>
+
+    <aside>
+      <h2>Recent Articles</h2>
+      <ol>
+        <% blog.articles[0...10].each do |article| %>
+          <li><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></li>
+        <% end %>
+      </ol>
+
+      <h2>Tags</h2>
+      <ol>
+        <% blog.tags.each do |tag, articles| %>
+          <li><%= link_to "#{tag} (#{articles.size})", tag_path(tag) %></li>
+        <% end %>
+      </ol>
+
+      <h2>By Year</h2>
+      <ol>
+        <% blog.articles.group_by {|a| a.date.year }.each do |year, articles| %>
+          <li><%= link_to "#{year} (#{articles.size})", blog_year_path(year) %></li>
+        <% end %>
+      </ol>
+
+      <a href="https://github.com/brennx0r" target="_blank"><img class="icon" src="images/github-color.svg"></a>
+      <a href="http://stackoverflow.com/users/3953656/brenna-flood" target="_blank"><img class="icon" src="images/stackoverflow-color.svg"></a>
+      <a href="https://twitter.com/brennx0r" target="_blank"><img class="icon" src="images/twitter-color.svg"></a>
+
+    </aside>
+
+    <footer>
+      <h5>All articles written by Brenna Flood unless otherwise noted.</h5>
+    </footer>
+  </body>
+</html>
