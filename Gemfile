@@ -22,6 +22,9 @@ gem "builder", "~> 3.0"
 # For blog summaries
 gem "nokogiri"
 
+# For TravisCI
+gem "rake"
+
 gem 'middleman-gemoji', '~> 0.1.2'
 
 group :development do
