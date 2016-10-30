@@ -81,18 +81,18 @@ configure :build do
   # set :http_prefix, "/Content/images/"
 end
 
-after_build do |builder|
-  src = "./CNAME"
-  dst = File.join(config[:build_dir],"CNAME")
-  builder.source_paths << File.dirname(__FILE__)
-  builder.copy_file(src,dst)
-end
+# after_build do |builder|
+#   src = "./CNAME"
+#   dst = File.join(config[:build_dir],"CNAME")
+#   builder.source_paths << File.dirname(__FILE__)
+#   builder.copy_file(src,dst)
+# end
 
 # Deploy settings
 activate :deploy do |deploy|
   deploy.build_before = true
   deploy.deploy_method = :git
-  deploy.remote = 'git@github.com:brennx0r/bren-do-blog.github.io.git'
+  deploy.remote = 'git@github.com:brennx0r/brennx0r.github.io.git'
   deploy.branch = 'master'
 end
 
