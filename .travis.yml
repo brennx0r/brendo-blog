@@ -2,5 +2,6 @@ language: ruby
 rvm: "2.2.3"
 script: 
  - bundle exec rake TravisTest
-
- 
+after_success:
+	deploy:
+ 		- middleman deploy
