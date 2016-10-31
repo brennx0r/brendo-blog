@@ -12,10 +12,7 @@
   </head>
   <body>
 
-    <header>
-      <h1>bren.do blog</h1>
-      <h5>putting the oops in devops since today</h5>
-    </header>
+    <%= partial "header" %>
 
     <section> 
       <div id="main" role="main" class="main">
@@ -24,35 +21,9 @@
     </section>
 
     <aside>
-      <h2>Recent Articles</h2>
-      <ol>
-        <% blog.articles[0...10].each do |article| %>
-          <li><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></li>
-        <% end %>
-      </ol>
-
-      <h2>Tags</h2>
-      <ol>
-        <% blog.tags.each do |tag, articles| %>
-          <li><%= link_to "#{tag} (#{articles.size})", tag_path(tag) %></li>
-        <% end %>
-      </ol>
-
-      <h2>By Year</h2>
-      <ol>
-        <% blog.articles.group_by {|a| a.date.year }.each do |year, articles| %>
-          <li><%= link_to "#{year} (#{articles.size})", blog_year_path(year) %></li>
-        <% end %>
-      </ol>
-
-      <a href="https://github.com/brennx0r" target="_blank"><img class="icon" src="images/github-color.svg"></a>
-      <a href="http://stackoverflow.com/users/3953656/brenna-flood" target="_blank"><img class="icon" src="images/stackoverflow-color.svg"></a>
-      <a href="https://twitter.com/brennx0r" target="_blank"><img class="icon" src="images/twitter-color.svg"></a>
-
+      <%= partial "sidebar" %>
     </aside>
 
-    <footer>
-      <h5>All articles written by Brenna Flood unless otherwise noted.</h5>
-    </footer>
+    <%= partial "footer" %>
   </body>
 </html>
