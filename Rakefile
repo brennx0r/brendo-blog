@@ -19,13 +19,13 @@ task :TravisTest do
   # try "cucumber"
 end
 
-  task :after_success do
-    puts "\nRunning Travis Deployment"
-    puts "\nSetting up Git access"
-    try "git clone git@github.com:${GH_USER}/${GH_USER}.github.io.git"
-    try "middleman deploy"
-  end
+task :after_success do
+  puts "\nRunning Travis Deployment"
+  puts "\nSetting up Git access"
+  try "git clone git@github.com:${GH_USER}/${GH_USER}.github.io.git"
+  try "middleman deploy"
 end
+
 
 ## Helper so we fail as soon as a command fails.
 def try(command)
