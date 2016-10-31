@@ -98,3 +98,24 @@ a:active {
 	text-decoration: underline;
 }
 
+
+@media (max-width: 766px;) {
+    width: 90%;
+
+    .col-2 > * {
+      width: 90%;
+      margin: 0;
+    }
+
+    .col-3 > * {
+      width: 100%;
+      margin: 0;
+    }
+  }
+
+  @media (max-width: 500px) {
+    section { width: 90%; }
+    aside { width: 90%; }
+  }
+}
+
