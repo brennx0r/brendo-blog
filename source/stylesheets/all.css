@@ -8,11 +8,6 @@
   width: device-width;
 }
 
-@media screen and (max-width:400px) {
-    @-ms-viewport{
-        width:320px;
-    }
-}
 
 body {
 	background-color: #fca9ed;
@@ -29,7 +24,7 @@ section {
 	float: left;
 	margin: 0 1.5%;
   	width: 59%;
-  	padding: 1em;
+  	padding: 2%;
 	background-color: white;
 	border-color: purple;
 	border-style: dotted;
@@ -39,7 +34,7 @@ aside {
     overflow: hidden;
     margin: 0 1.5%;
   	width: 20%;
-  	padding: 1em;
+  	padding: 2%;
   	background-color: white;
 	border-color: purple;
 	border-style: dotted;
@@ -48,8 +43,7 @@ aside {
 footer {
 	clear: both;
 	margin: 0 1.5%;
-	*zoom: 1;
-	padding: 1em;
+	padding: 2%;
 }
 
 .icon {
@@ -99,23 +93,14 @@ a:active {
 }
 
 
-@media (max-width: 766px) {
-	width: 90%;
-
-	.col-2 > * {
-	  width: 90%;
-	  margin: 0;
-	}
-
-	.col-3 > * {
-	  width: 100%;
-	  margin: 0;
-	}
+@media (max-width: 768px) {
+	section { width: 60%; }
+	aside { width: 60%; }
 }
 
 @media (max-width: 500px) {
-	section { width: 90%; }
-	aside { width: 90%; }
+	section { width: 85%; }
+	aside { width: 85%; }
 }
 
 
