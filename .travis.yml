@@ -4,10 +4,3 @@ script:
 - bundle exec rake TravisTest
 after_success:
 - bundle exec rake after_success
-deploy:
-  provider: releases
-  api_key:
-    secure: <%= ENV["TRAVIS_KEY"] %>
-  file: '**'
-  on:
-    repo: brennx0r/brennx0r.github.io

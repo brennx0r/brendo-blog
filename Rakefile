@@ -19,25 +19,11 @@ task :TravisTest do
   # try "cucumber"
 end
 
-task :deploy do
-  puts "\nDeploying to GitHub Pages"
-  try "middleman deploy"
-end
-
-namespace :travis do
-  task :script do
-    Rake::Task["TravisTest"].invoke
-  end
-
   task :after_success do
     puts "\nRunning Travis Deployment"
     puts "\nSetting up Git access"
-    try "echo ${GH_TOKEN} > ./.git/credentials"
-    try "git config --global user.name ${GH_USER}"
-    try "git config --global user.email ${GH_EMAIL}"
-    try "git remote set-url origin \"https://${GH_TOKEN}@github.com/${GH_USER/brennx0r\.github\.io\""
-
-    Rake::Task["deploy"].invoke
+    try "git clone git@github.com:${GH_USER}/${GH_USER}.github.io.git"
+    try "middleman deploy"
   end
 end
 
