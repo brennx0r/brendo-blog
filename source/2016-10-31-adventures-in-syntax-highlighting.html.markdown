@@ -36,7 +36,7 @@ set :markdown, :fenced_code_blocks => true, :smartypants => true
 activate :syntax, line_numbers: true, css_class: 'codehilite'
 ```
 
-_$your_file.css:_ Include all the style for Rouge theme you need
+_$yourfile.css:_ Include all the style for Rouge theme you need
 
 Additionally, style as follows:
 
