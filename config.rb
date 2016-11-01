@@ -67,8 +67,10 @@ page "/feed.xml", layout: false
 # Need to investigate, but for the time being, commenting out the activation.
 # activate :gemoji
 
+set :markdown_engine, :redcarpet
+set :markdown, :fenced_code_blocks => true, :smartypants => true
 
-activate :syntax, :line_numbers => true
+activate :syntax, line_numbers: true, css_class: 'codehilite'
 
 # Build-specific configuration
 configure :build do

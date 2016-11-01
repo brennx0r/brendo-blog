@@ -35,13 +35,13 @@ Even though there are tons of blogs that explain how to get started using Middle
 
 Gotchas - If you are using Middleman 4.0, you will need to use 
  
-``` ruby
+```ruby
 'middleman-deploy', '~> 2.0.0.pre.alpha'
 ```
 
 Otherwise, if you attempt to run middleman you'll get an error like the following:
 
-```
+```bash
 Ilmatar:brendo-blog brennx0r$ middleman server
 /Users/brennx0r/.rvm/gems/ruby-2.2.3/gems/middleman-core-4.1.10/lib/middleman-core/extensions.rb:96:in `load': Tried to activate old-style extension: deploy. They are no longer supported. (RuntimeError)
 ```

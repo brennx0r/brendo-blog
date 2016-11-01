@@ -9,20 +9,21 @@
 
     <title>bren.do - blog<%= ' - ' + current_article.title unless current_article.nil? %></title>
     <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
+    <%= stylesheet_link_tag "highlighting" %>
   </head>
   <body>
 
     <%= partial "header" %>
+    
+      <section> 
+        <div id="main" role="main" class="main">
+          <%= yield %>
+        </div>
+      </section>
 
-    <section> 
-      <div id="main" role="main" class="main">
-        <%= yield %>
-      </div>
-    </section>
-
-    <aside>
-      <%= partial "sidebar" %>
-    </aside>
+      <aside>
+        <%= partial "sidebar" %>
+      </aside>
 
     <%= partial "footer" %>
   </body>

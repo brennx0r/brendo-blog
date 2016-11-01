@@ -22,9 +22,10 @@ end
 task :after_success do
   puts "\nRunning Travis Deployment"
   puts "\nSetting up Git access"
-  try "git clone git@github.com:brennx0r/brennx0r.github.io.git"
   try "git config user.name ${GH_USER}"
   try "git config user.email ${GH_EMAIL}"
+  try "curl -u \"username:$GH_TOKEN\" https://github.com/brennx0r/brennx0r.github.io.git"
+  try "git clone git@github.com:brennx0r/brennx0r.github.io.git"
   try "middleman deploy"
 end
 
