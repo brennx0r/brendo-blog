@@ -117,11 +117,17 @@ a:active {
 .rouge-table { 
 	background-color: #e6f3f7;
 	max-width: 300px;
-	font-size: 12px;
+	font-size: 16px;
 }
 
 .rouge-code {
 	width: 40%;
+}
+
+code {
+	background-color: #e6f3f7;
+	font-size: 18px;
+	color: purple;
 }
 
 .codehilite .hll { background-color: #ffffcc }
